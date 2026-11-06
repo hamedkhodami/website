@@ -1,0 +1,282 @@
+<!doctype html>
+<html lang="fa" dir="rtl" class="bg-bg">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>حامد خدامی | توسعه‌دهنده بک‌اند و Django</title>
+  <meta name="description" content="حامد خدامی، توسعه‌دهنده بک‌اند با تخصص Python و Django. ساخت API های مقیاس‌پذیر، امن و قابل‌نگهداری. برنامه‌نویس در Trolut آلمان.">
+  <meta name="theme-color" content="#0a0b10">
+  <meta property="og:title" content="حامد خدامی | توسعه‌دهنده بک‌اند و Django">
+  <meta property="og:description" content="نمونه‌کارها، سوابق و مهارت‌های حامد خدامی؛ توسعه‌دهنده بک‌اند با Django.">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="fa_IR">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='9' fill='%230a0b10'/%3E%3Cpath d='M9 22V10m14 12V10M9 16h14' stroke='%23ff6a3d' stroke-width='3' stroke-linecap='round' fill='none'/%3E%3C/svg%3E">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&family=Vazirmatn:wght@300..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/tailwind.css">
+</head>
+
+<body class="overflow-x-hidden pb-28 lg:pb-0">
+  <a href="#main" class="sr-only focus:not-sr-only focus:fixed focus:top-3 focus:start-3 focus:z-[80] focus:rounded-lg focus:bg-accent focus:px-4 focus:py-2 focus:text-bg">پرش به محتوا</a>
+
+  <!-- ═════════ هدر ═════════ -->
+  <header id="header" class="site-header fixed inset-x-0 top-0 z-40">
+    <div class="bar">
+      <div class="mx-auto flex h-16 max-w-6xl items-center justify-between px-5 md:h-[4.5rem] md:px-8">
+        <a href="#top" class="flex items-center gap-2.5 font-fa text-[1.05rem] font-bold" aria-label="حامد خدامی، بازگشت به بالا">
+          <span class="grid size-9 place-items-center rounded-xl bg-accent text-bg">
+            <svg viewBox="0 0 24 24" class="size-5" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" aria-hidden="true"><path d="M7 18V6m10 12V6M7 12h10"/></svg>
+          </span>
+          حامد خدامی
+        </a>
+
+        <!-- ناوبری دسکتاپ -->
+        <nav class="nav-pill hidden items-center gap-1 rounded-full p-1 font-fa text-[.95rem] lg:flex" aria-label="ناوبری اصلی">
+          <a class="nav-link" href="#about">درباره من</a>
+          <a class="nav-link" href="#experience">سوابق</a>
+          <a class="nav-link" href="#skills">مهارت‌ها</a>
+          <a class="nav-link" href="#projects">پروژه‌ها</a>
+          <a class="nav-link" href="#contact">ارتباط</a>
+        </nav>
+
+        <a href="#contact" class="inline-flex items-center gap-2 rounded-full bg-fg px-4 py-1.5 font-fa text-[.9rem] font-bold text-bg transition hover:bg-accent md:px-5 md:py-2 md:text-[.95rem]">
+          <span class="relative grid size-2 place-items-center"><span class="absolute inset-0 animate-ping-soft rounded-full bg-accent"></span><span class="relative size-2 rounded-full bg-accent"></span></span>
+          بیا حرف بزنیم
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- داک ناوبری موبایل -->
+  <nav id="dock" class="dock fixed inset-x-4 bottom-[max(1rem,env(safe-area-inset-bottom))] z-50 mx-auto flex max-w-md items-center gap-1 rounded-full p-1.5 font-fa lg:hidden" aria-label="ناوبری موبایل">
+    <a href="#top" class="flex h-12 items-center justify-center gap-2 rounded-full" aria-label="خانه"><svg viewBox="0 0 24 24" class="size-[1.3rem] shrink-0" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11 12 3l9 8v9a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1z"/></svg><span>خانه</span></a>
+    <a href="#about" class="flex h-12 items-center justify-center gap-2 rounded-full" aria-label="درباره من"><svg viewBox="0 0 24 24" class="size-[1.3rem] shrink-0" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></svg><span>درباره</span></a>
+    <a href="#experience" class="flex h-12 items-center justify-center gap-2 rounded-full" aria-label="سوابق"><svg viewBox="0 0 24 24" class="size-[1.3rem] shrink-0" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="7" width="18" height="13" rx="2.5"/><path d="M9 7V5a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v2M3 13h18"/></svg><span>سوابق</span></a>
+    <a href="#skills" class="flex h-12 items-center justify-center gap-2 rounded-full" aria-label="مهارت‌ها"><svg viewBox="0 0 24 24" class="size-[1.3rem] shrink-0" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 3 9 5-9 5-9-5zM3 13l9 5 9-5"/></svg><span>مهارت‌ها</span></a>
+    <a href="#projects" class="flex h-12 items-center justify-center gap-2 rounded-full" aria-label="پروژه‌ها"><svg viewBox="0 0 24 24" class="size-[1.3rem] shrink-0" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h7v7H4zM13 4h7v7h-7zM4 13h7v7H4zM13 13h7v7h-7z"/></svg><span>پروژه‌ها</span></a>
+    <a href="#contact" class="flex h-12 items-center justify-center gap-2 rounded-full" aria-label="ارتباط"><svg viewBox="0 0 24 24" class="size-[1.3rem] shrink-0" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2.5"/><path d="m3 7 9 6 9-6"/></svg><span>ارتباط</span></a>
+  </nav>
+
+  <main id="main" class="font-fa">
+
+    <!-- ═════════ هیرو ═════════ -->
+    <section id="top" class="relative isolate overflow-hidden pb-16 pt-28 md:pt-40">
+      <div class="dots pointer-events-none absolute inset-0 -z-10"></div>
+      <div class="pointer-events-none absolute left-1/2 top-[-18rem] -z-10 h-[34rem] w-[60rem] -translate-x-1/2 rounded-full bg-accent/15 blur-[120px]"></div>
+
+      <div class="mx-auto max-w-6xl px-5 md:px-8">
+        <p class="hero-rise text-lg text-mute md:text-xl" style="--d:.05s">سلام، من</p>
+        <h1 id="heroName" class="hero-name mt-1 text-[clamp(3.4rem,13vw,9rem)] font-extrabold leading-[1.2]">
+          <span class="hero-wipe block">حامد خدامی</span>
+        </h1>
+        <p class="hero-rise mt-3 text-[clamp(1.35rem,3.4vw,2.2rem)] font-bold leading-snug text-fg" style="--d:.5s">توسعه‌دهنده بک‌اند، متخصص Django</p>
+        <p class="hero-rise mt-5 max-w-[34rem] text-[1.05rem] leading-[2.05] text-mute md:text-lg" style="--d:.65s">
+          API هایی می‌سازم که سریع، امن و قابل‌اعتماد باشند؛ از طراحی معماری و نوشتن تست تا استقرار روی سرور.
+        </p>
+        <div class="hero-rise mt-8 flex flex-wrap gap-3" style="--d:.8s">
+          <a href="#projects" class="rounded-full bg-accent px-7 py-3.5 font-bold text-bg transition hover:bg-accent-2">دیدن پروژه‌ها</a>
+          <a href="#contact" class="rounded-full border border-line px-7 py-3.5 font-bold transition hover:border-accent hover:text-accent">تماس با من</a>
+        </div>
+
+        <!-- بنتو: خلاصه‌ی من در چند کاشی -->
+        <div class="hero-rise mt-14 grid grid-cols-2 gap-3 md:mt-20 md:gap-4 lg:grid-cols-4 lg:grid-rows-2" style="--d:1s">
+
+          <article class="spot col-span-2 flex flex-col justify-between gap-8 rounded-3xl p-6 md:p-8 lg:row-span-2">
+            <p class="text-[1.3rem] font-bold leading-[1.95] md:text-[1.6rem]">
+              چیزی که کاربر نمی‌بیند، همان چیزی است که تجربه‌اش را می‌سازد. برای همین بک‌اند را جدی می‌گیرم.
+            </p>
+            <ul class="flex flex-wrap gap-2 text-[.9rem]">
+              <li class="rounded-full border border-line px-3.5 py-1">میکروسرویس</li>
+              <li class="rounded-full border border-line px-3.5 py-1" dir="ltr">DDD</li>
+              <li class="rounded-full border border-line px-3.5 py-1" dir="ltr">Clean Code</li>
+              <li class="rounded-full border border-line px-3.5 py-1">تست‌نویسی</li>
+            </ul>
+          </article>
+
+          <article class="spot flex flex-col justify-between gap-6 rounded-3xl p-5 md:p-6">
+            <p class="flex items-center gap-2 text-[.9rem] text-mute">
+              <span class="relative grid size-2 place-items-center"><span class="absolute inset-0 animate-ping-soft rounded-full bg-accent"></span><span class="relative size-2 rounded-full bg-accent"></span></span>
+              اکنون
+            </p>
+            <div>
+              <p class="text-xl font-bold leading-snug" dir="ltr">Trolut</p>
+              <p class="text-[.92rem] text-mute">آلمان، با Laravel و Vue</p>
+              <p class="mt-3 font-bold text-accent" id="clock" aria-label="ساعت در آلمان">--:--</p>
+            </div>
+          </article>
+
+          <article class="spot flex flex-col justify-between gap-4 rounded-3xl p-5 md:p-6" id="ringCard">
+            <div class="relative mx-auto size-24 md:size-28">
+              <svg viewBox="0 0 100 100" class="size-full -rotate-90" aria-hidden="true">
+                <circle cx="50" cy="50" r="42" fill="none" stroke="rgb(255 255 255 / .09)" stroke-width="8"/>
+                <circle class="ring-arc" cx="50" cy="50" r="42" fill="none" stroke="#ff6a3d" stroke-width="8" stroke-linecap="round" style="--v:.85"/>
+              </svg>
+              <span class="absolute inset-0 grid place-items-center text-xl font-extrabold md:text-2xl">٪90+</span>
+            </div>
+            <p class="text-center text-[.9rem] leading-snug text-mute">پوشش تست‌ها با Pytest</p>
+          </article>
+
+          <article class="spot col-span-2 flex flex-col justify-between gap-5 rounded-3xl p-5 md:p-6">
+            <p class="text-[.95rem] text-mute">ابزارهای روزمره</p>
+            <ul id="heroStack" class="flex flex-wrap gap-3" dir="ltr"></ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═════════ درباره من ═════════ -->
+    <section id="about" class="py-20 md:py-28">
+      <div class="mx-auto max-w-6xl px-5 md:px-8">
+        <header class="mb-12 flex flex-wrap items-end justify-between gap-4 border-b border-line pb-6">
+          <h2 class="text-[2.2rem] font-extrabold leading-tight md:text-5xl">درباره من</h2>
+          <p class="max-w-sm text-mute">من کیستم و روی چه کارهایی تمرکز دارم.</p>
+        </header>
+
+        <div class="grid gap-10 lg:grid-cols-[1.15fr_.85fr] lg:gap-16">
+          <div class="max-w-[38rem]">
+            <p class="text-[1.12rem] leading-[2.15] md:text-[1.2rem]">
+              با Python و Django کار می‌کنم و تمرکزم روی طراحی، توسعه و پیاده‌سازی API های مقیاس‌پذیر است؛ با نگاه به کیفیت کد، عملکرد و امنیت. با پایگاه‌های داده‌ی رابطه‌ای و غیررابطه‌ای کار کرده‌ام و برای معماری‌هایی مثل میکروسرویس و DDD تجربه‌ی عملی دارم.
+            </p>
+            <p class="mt-5 text-[1.12rem] leading-[2.15] text-mute md:text-[1.2rem]">
+              مسیرم از یک دوره‌ی تخصصی Django شروع شد، در تیم اسمارتن ادامه پیدا کرد، با کار فریلنسری پخته‌تر شد و حالا در Trolut آلمان، کنار تیم برنامه‌نویسی، با Laravel و Vue کار می‌کنم. به یادگیری مداوم و اشتراک‌گذاری دانش علاقه دارم.
+            </p>
+          </div>
+
+          <dl class="spot rounded-3xl px-6 py-2 md:px-8">
+            <div class="grid gap-1 border-b border-line py-4 sm:grid-cols-[7.5rem_1fr] sm:gap-4"><dt class="text-mute">تخصص اصلی</dt><dd class="font-medium">بک‌اند با <span dir="ltr">Python</span> و <span dir="ltr">Django</span></dd></div>
+            <div class="grid gap-1 border-b border-line py-4 sm:grid-cols-[7.5rem_1fr] sm:gap-4"><dt class="text-mute">معماری</dt><dd class="font-medium">میکروسرویس و <span dir="ltr">DDD</span></dd></div>
+            <div class="grid gap-1 border-b border-line py-4 sm:grid-cols-[7.5rem_1fr] sm:gap-4"><dt class="text-mute">کیفیت کد</dt><dd class="font-medium">تست با <span dir="ltr">Pytest</span> و پوشش بیش از 90٪</dd></div>
+            <div class="grid gap-1 border-b border-line py-4 sm:grid-cols-[7.5rem_1fr] sm:gap-4"><dt class="text-mute">هم‌اکنون</dt><dd class="font-medium"><span dir="ltr">Laravel</span> و <span dir="ltr">Vue.js</span> در Trolut</dd></div>
+            <div class="grid gap-1 border-b border-line py-4 sm:grid-cols-[7.5rem_1fr] sm:gap-4"><dt class="text-mute">زبان‌ها</dt><dd class="font-medium">فارسی (مادری)، انگلیسی (خوب)</dd></div>
+            <div class="grid gap-1 py-4 sm:grid-cols-[7.5rem_1fr] sm:gap-4"><dt class="text-mute">علاقه‌مندی‌ها</dt><dd class="font-medium">برنامه‌نویسی، هوش مصنوعی، فناوری‌های نوین</dd></div>
+          </dl>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═════════ سوابق ═════════ -->
+    <section id="experience" class="py-20 md:py-28">
+      <div class="mx-auto max-w-6xl px-5 md:px-8">
+        <header class="mb-12 flex flex-wrap items-end justify-between gap-4 border-b border-line pb-6">
+          <h2 class="text-[2.2rem] font-extrabold leading-tight md:text-5xl">سوابق حرفه‌ای</h2>
+          <p class="max-w-sm text-mute">از جدیدترین به قدیمی‌ترین.</p>
+        </header>
+
+        <ol class="grid gap-4">
+          <li class="spot reveal grid gap-4 rounded-3xl p-6 md:grid-cols-[12rem_1fr] md:gap-10 md:p-8" style="border-color:rgb(255 106 61 / .35)">
+            <div>
+              <p class="text-mute">۱۴۰۵ تا اکنون</p>
+              <span class="mt-2 inline-block rounded-full bg-accent px-3 py-0.5 text-[.8rem] font-bold text-bg">شغل فعلی</span>
+            </div>
+            <div>
+              <h3 class="text-[1.5rem] font-bold leading-snug md:text-[1.75rem]">برنامه‌نویس در <span dir="ltr">Trolut</span>، آلمان</h3>
+              <p class="mt-3 max-w-[40rem] text-mute md:text-[1.05rem]">عضو تیم برنامه‌نویسی؛ توسعه و نگهداری محصولات وب با <span dir="ltr">Laravel</span> و <span dir="ltr">Vue</span>.</p>
+              <ul class="mt-4 flex flex-wrap gap-2" data-tags="Laravel,Vue.js"></ul>
+            </div>
+          </li>
+
+          <li class="spot reveal grid gap-4 rounded-3xl p-6 md:grid-cols-[12rem_1fr] md:gap-10 md:p-8">
+            <p class="text-mute">۱۴۰۴ تا ۱۴۰۵</p>
+            <div>
+              <h3 class="text-[1.5rem] font-bold leading-snug md:text-[1.75rem]">توسعه‌دهنده فریلنسر بک‌اند</h3>
+              <p class="mt-3 max-w-[40rem] text-mute md:text-[1.05rem]">طراحی بک‌اند با معماری‌های پیشرفته مثل میکروسرویس و <span dir="ltr">DDD</span>، با <span dir="ltr">Django REST Framework</span> و پردازش ناهمزمان با <span dir="ltr">Celery</span>. تست‌های جامع با <span dir="ltr">Pytest</span> و <span dir="ltr">coverage.py</span> تا پوشش بیش از ۸۵٪ برای پایداری کد. اپلیکیشن باشگاه بدنسازی یکی از پروژه‌های این دوره است.</p>
+              <ul class="mt-4 flex flex-wrap gap-2" data-tags="Django REST Framework,Celery,Pytest,Microservices,DDD"></ul>
+            </div>
+          </li>
+
+          <li class="spot reveal grid gap-4 rounded-3xl p-6 md:grid-cols-[12rem_1fr] md:gap-10 md:p-8">
+            <p class="text-mute">۱۴۰۳ تا ۱۴۰۴</p>
+            <div>
+              <h3 class="text-[1.5rem] font-bold leading-snug md:text-[1.75rem]">برنامه‌نویس بک‌اند در اسمارتن <span class="text-mute" dir="ltr">(Smarten)</span></h3>
+              <p class="mt-3 max-w-[40rem] text-mute md:text-[1.05rem]">توسعه‌ی بک‌اند پروژه‌ها با <span dir="ltr">Django</span> و <span dir="ltr">Python</span>؛ پیاده‌سازی <span dir="ltr">API</span> های پیچیده با <span dir="ltr">DRF</span>، مستندسازی با <span dir="ltr">Swagger</span> و مدیریت <span dir="ltr">PostgreSQL</span>. استقرار روی لینوکس با <span dir="ltr">Docker</span> و <span dir="ltr">Nginx</span>، و تجربه‌ی کار تیمی همراه با آشنایی با <span dir="ltr">Tailwind CSS</span>.</p>
+              <ul class="mt-4 flex flex-wrap gap-2" data-tags="Django,DRF,Swagger,PostgreSQL,Docker,Nginx"></ul>
+            </div>
+          </li>
+
+          <li class="spot reveal grid gap-4 rounded-3xl p-6 md:grid-cols-[12rem_1fr] md:gap-10 md:p-8">
+            <p class="text-mute">۱۴۰۲ تا ۱۴۰۳</p>
+            <div>
+              <h3 class="text-[1.5rem] font-bold leading-snug md:text-[1.75rem]">دوره‌ی تخصصی بک‌اند با پایتون و جنگو</h3>
+              <p class="mt-3 max-w-[40rem] text-mute md:text-[1.05rem]">یادگیری عمیق <span dir="ltr">Python</span> و <span dir="ltr">Django</span>؛ طراحی <span dir="ltr">API</span> های <span dir="ltr">RESTful</span>، کار با <span dir="ltr">SQL Server</span>، ارتباط بلادرنگ با <span dir="ltr">WebSockets</span> و اصول <span dir="ltr">Clean Code</span>، به‌همراه چند پروژه‌ی عملی و آشنایی با مبانی <span dir="ltr">HTML، CSS</span> و <span dir="ltr">JavaScript</span>.</p>
+              <ul class="mt-4 flex flex-wrap gap-2" data-tags="Python,Django,WebSockets,SQL Server,Clean Code"></ul>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ═════════ مهارت‌ها ═════════ -->
+    <section id="skills" class="py-20 md:py-28">
+      <div class="mx-auto max-w-6xl px-5 md:px-8">
+        <header class="flex flex-wrap items-end justify-between gap-4 pb-6">
+          <h2 class="text-[2.2rem] font-extrabold leading-tight md:text-5xl">مهارت‌ها</h2>
+          <p class="max-w-sm text-mute">ابزارهایی که هر روز با آن‌ها کار می‌کنم، به ترتیب اهمیت.</p>
+        </header>
+        <div id="skillList"></div>
+      </div>
+    </section>
+
+    <!-- ═════════ پروژه‌ها ═════════ -->
+    <section id="projects" class="py-20 md:py-28">
+      <div class="mx-auto max-w-6xl px-5 md:px-8">
+        <header class="mb-12 flex flex-wrap items-end justify-between gap-4 border-b border-line pb-6">
+          <h2 class="text-[2.2rem] font-extrabold leading-tight md:text-5xl">آخرین پروژه‌ها</h2>
+          <a href="https://github.com/hamedkhodami" target="_blank" rel="noopener" class="font-bold text-accent underline decoration-2 underline-offset-8 transition hover:text-accent-2">همه‌ی کدها در گیت‌هاب</a>
+        </header>
+
+        <div id="projectGrid" class="no-scrollbar -mx-5 flex snap-x snap-mandatory gap-4 overflow-x-auto scroll-px-5 px-5 pb-4 md:mx-0 md:grid md:grid-cols-2 md:gap-5 md:overflow-visible md:px-0 md:pb-0 lg:grid-cols-3"></div>
+        <p class="mt-3 text-center text-sm text-mute md:hidden">برای دیدن بقیه‌ی پروژه‌ها به کنار بکشید</p>
+      </div>
+    </section>
+
+    <!-- ═════════ ارتباط ═════════ -->
+    <section id="contact" class="relative isolate overflow-hidden pb-12 pt-20 md:pt-28">
+      <div class="pointer-events-none absolute bottom-[-20rem] left-1/2 -z-10 h-[34rem] w-[56rem] -translate-x-1/2 rounded-full bg-accent/12 blur-[120px]"></div>
+      <div class="mx-auto max-w-6xl px-5 md:px-8">
+        <header class="mb-12 flex flex-wrap items-end justify-between gap-4 border-b border-line pb-6">
+          <h2 class="text-[2.2rem] font-extrabold leading-tight md:text-5xl">راه‌های ارتباطی</h2>
+          <p class="max-w-sm text-mute">برای همکاری، پروژه یا یک گفتگوی فنی، راحت پیام بده.</p>
+        </header>
+
+        <div class="spot flex flex-col items-start gap-6 rounded-3xl p-6 md:flex-row md:items-center md:justify-between md:p-10">
+          <a id="emailLink" href="mailto:khodamihamed77@gmail.com" dir="ltr" class="break-all text-[clamp(1.2rem,5vw,2.4rem)] font-semibold leading-tight transition hover:text-accent">khodamihamed77@gmail.com</a>
+          <button id="copyBtn" type="button" class="inline-flex shrink-0 items-center gap-2 rounded-full bg-accent px-6 py-3 font-bold text-bg transition hover:bg-accent-2">
+            <svg viewBox="0 0 24 24" class="size-5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="11" height="11" rx="2.5"/><path d="M5 15V6.5A1.5 1.5 0 0 1 6.5 5H15"/></svg>
+            <span id="copyLabel">کپی ایمیل</span>
+          </button>
+        </div>
+
+        <ul class="mt-4 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+          <li><a class="spot flex items-center gap-4 rounded-2xl p-5" href="https://github.com/hamedkhodami" target="_blank" rel="noopener">
+            <span class="grid size-12 place-items-center rounded-xl bg-white/5 text-fg [&_svg]:size-6" data-icon="github"></span>
+            <span><span class="block font-bold">گیت‌هاب</span><span class="block text-sm text-mute" dir="ltr">hamedkhodami</span></span></a></li>
+          <li><a class="spot flex items-center gap-4 rounded-2xl p-5" href="https://t.me/hamed_k977" target="_blank" rel="noopener">
+            <span class="grid size-12 place-items-center rounded-xl bg-white/5 text-fg [&_svg]:size-6" data-icon="telegram"></span>
+            <span><span class="block font-bold">تلگرام</span><span class="block text-sm text-mute" dir="ltr">@hamed_k977</span></span></a></li>
+          <li><a class="spot flex items-center gap-4 rounded-2xl p-5" href="https://linkedin.com/in/hamed-khodami-917557329" target="_blank" rel="noopener">
+            <span class="grid size-12 place-items-center rounded-xl bg-white/5 text-fg [&_svg]:size-6" data-icon="linkedin"></span>
+            <span><span class="block font-bold">لینکدین</span><span class="block text-sm text-mute" dir="ltr">hamed-khodami</span></span></a></li>
+          <li><a class="spot flex items-center gap-4 rounded-2xl p-5" href="https://instagram.com/hamed_khodami77" target="_blank" rel="noopener">
+            <span class="grid size-12 place-items-center rounded-xl bg-white/5 text-fg [&_svg]:size-6" data-icon="instagram"></span>
+            <span><span class="block font-bold">اینستاگرام</span><span class="block text-sm text-mute" dir="ltr">@hamed_khodami77</span></span></a></li>
+        </ul>
+
+        <footer class="mt-16 flex flex-wrap items-center justify-between gap-3 border-t border-line pt-6 text-sm text-mute">
+          <p>© ۱۴۰۵ حامد خدامی</p>
+          <p>ساخته‌شده با <span dir="ltr">HTML، Tailwind CSS</span> و <span dir="ltr">JavaScript</span></p>
+        </footer>
+      </div>
+    </section>
+  </main>
+
+  <div id="toast" class="pointer-events-none fixed inset-x-0 bottom-28 z-[70] flex translate-y-3 justify-center px-5 font-fa opacity-0 transition duration-300 lg:bottom-8" role="status" aria-live="polite">
+    <span class="rounded-full bg-accent px-5 py-2.5 font-bold text-bg shadow-lg">ایمیل کپی شد</span>
+  </div>
+
+  <script src="assets/js/icons.js"></script>
+  <script src="assets/js/data.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
